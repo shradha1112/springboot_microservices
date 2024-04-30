@@ -1,0 +1,30 @@
+package com.lcwd.user.service.UserSevice.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lcwd.user.service.UserSevice.entities.User;
+import com.lcwd.user.service.UserSevice.repository.UserRepository;
+
+@Service
+public class UserService Impl implements UserService {
+	
+@Autowired
+private UserRepository userRepository;
+
+public User saveUser (User user) {
+return null;
+}
+
+
+
+public List<User> getAllUser() {
+return null;
+}
+
+
+public User getUser(String userId) {
+	}
+}

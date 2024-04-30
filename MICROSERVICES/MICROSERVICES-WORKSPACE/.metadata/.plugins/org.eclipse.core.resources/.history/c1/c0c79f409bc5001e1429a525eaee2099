@@ -1,0 +1,36 @@
+package com.lcwd.user.service.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
+import org.springframework.stereotype.Service;
+
+//import com.lcwd.user.service.UserSevice.exception.ResourseNotFoundException;
+import com.lcwd.user.service.entities.User;
+import com.lcwd.user.service.exception.ResourseNotFoundException;
+import com.lcwd.user.service.repository.UserRepository;
+import com.lcwd.user.service.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+@Autowired
+private UserRepository userRepository;
+
+public User saveUser (User user) {
+	return userRepository.save(user);
+
+}
+
+
+
+public List<User> getAllUser() {
+return userRepository.findAll();
+}
+
+
+public User getUser(String userId) {
+	return userRepository.findById(userId).orElseThrow(()->new ResourseNotFoundException("User with given id not found"));
+	}
+}

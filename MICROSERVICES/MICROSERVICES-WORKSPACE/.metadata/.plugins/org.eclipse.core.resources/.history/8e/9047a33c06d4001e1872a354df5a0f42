@@ -1,0 +1,5 @@
+package com.lcwd.gateway.ApiGateway.models;
+
+public class AuthResponse {
+
+}

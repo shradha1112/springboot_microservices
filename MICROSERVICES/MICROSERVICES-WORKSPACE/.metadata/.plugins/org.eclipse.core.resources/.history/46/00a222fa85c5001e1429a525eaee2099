@@ -1,0 +1,14 @@
+package com.lcwd.user.service.UserSevice.exception;
+
+public class ResourseNotFoundException extends RuntimeException {
+
+	public ResourseNotFoundException()
+	{
+		super("resourse not found on server ");
+	}
+	
+	public ResourseNotFoundException(String message)
+	{
+		super( message );
+	}
+}
